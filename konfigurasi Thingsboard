@@ -1,0 +1,12 @@
+Konfigurasi ThingsBoard
+
+Login ke ThingsBoard Cloud → https://demo.thingsboard.io
+Pergi ke Devices → Add New Device
+Pilih Device Type: ESP32 dan enable "Is Gateway?"
+Salin Access Token dan masukkan dalam kod ESP32
+Pergi ke Dashboard → Add Widget
+
+Tambah:
+Gauge untuk suhu dan kelembapan
+Switch untuk menghidupkan/mematikan kipas secara manual
+Graph untuk log pergerakan dan suhu dari masa ke masa
