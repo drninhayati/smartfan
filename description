@@ -1,0 +1,36 @@
+📌 1. Senarai Komponen
+🛠 Perkakasan
+ESP32 – Mikropengawal utama dengan WiFi
+Relay 5V (Single Channel) – Untuk menghidupkan/mematikan kipas
+Kipas (12V/220V) – Peranti yang akan dikawal
+PIR Sensor (HC-SR501) – Untuk mengesan pergerakan manusia
+DHT11/DHT22 – Untuk mengukur suhu dan kelembapan
+Bekalan Kuasa (5V untuk ESP32, 12V/220V untuk kipas)
+Wayar jumper & breadboard
+📌 2. Konsep Sistem
+Sistem ini akan mempunyai dua mod operasi:
+✅ Mod Automatik
+
+Kipas hidup jika suhu > 30°C
+Kipas hidup jika PIR sensor mengesan pergerakan
+Kipas mati jika tiada pergerakan dalam tempoh tertentu atau suhu turun
+✅ Mod Manual (IoT Control via ThingsBoard)
+
+Pengguna boleh hidup/matikan kipas dari ThingsBoard
+Dashboard ThingsBoard akan paparkan data suhu, kelembapan, dan status kipas
+
+Sambungan Litar
+ESP32       →  Relay
+GPIO 25     →  IN Relay
+GND         →  GND
+3.3V        →  VCC
+
+ESP32       →  PIR Sensor
+GPIO 26     →  OUT PIR
+GND         →  GND
+3.3V        →  VCC
+
+ESP32       →  DHT11/DHT22
+GPIO 27     →  Data DHT
+GND         →  GND
+3.3V        →  VCC
